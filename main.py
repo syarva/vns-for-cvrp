@@ -1,7 +1,7 @@
 import parser_functions as pf
 import construction as con
 import clusterfirst
-#import improvement as imp
+import improvement as imp
 import numpy as np
 import greedy
 import swap
@@ -56,7 +56,7 @@ print("sweep: ",dsw)
 print("cw   : ",dcw)
 
 
-"""
+
 print ("Choose a construction method: nn for nearest neighbor, sw for sweep, cw for clarke-wright ")
 constr = input()
 if constr=="nn":
@@ -126,11 +126,4 @@ else:
         sumcw = sumcw + costnewcw
     print (sumcw/10)
     
-#file = open("test.txt","a") 
- 
-#file.write("\\"+"textlatin{"+instance+"} & -  &  " +str(len(gvr))+"-"+str(costgvr)+"  & -  &  "+str(len(clustersnew))+"-"+str(costcl) +"  & - &  "+str(len(cw))+"-"+str(costcw)+ "  & - \\"+"\n") 
- 
-#file.close() 
-#print("\\"+"textlatin{"+instance+"} & -  &  " +str(len(gvr))+"-"+str(costgvr)+"  & -  &  "+str(len(clustersnew))+"-"+str(costcl) +"  & - &  "+str(len(cw))+"-"+str(costcw)+ "  & - \\")
 
-"""
