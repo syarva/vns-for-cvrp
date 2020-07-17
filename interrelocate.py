@@ -73,23 +73,3 @@ def INTERRELOCATE(routes,best,rand,dm,demand,capacity):
                                         return new                                    
             return routes
   
-            
-            """
-            #best inter relocate
-            bir = copy.deepcopy(routes)
-            for FROM in routes:
-                for TO in routes:
-                    if FROM!=TO:
-                        for k in FROM[1:len(FROM)-1]:
-                            if con.ROUTE_DEMAND(TO,demand)+demand[k-1][1]<=capacity:
-                                new = copy.deepcopy(routes)
-                                for index in range(1,len(TO)-1):
-                                    for d in new:
-                                        if d==FROM:
-                                            d = np.setdiff1d(d,np.array([k]))
-                                        elif d==TO:
-                                            d = np.insert(d,k,index)                                    
-                                    if con.COST(new,dm)<con.COST(bir,dm):
-                                        bir = copy.deepcopy(new)                                    
-            return bir
-            """
