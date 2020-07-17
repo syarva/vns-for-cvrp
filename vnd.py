@@ -41,29 +41,7 @@ def VND(routing,cost,dm,demand,capacity):
             routes = copy.deepcopy(f)
             #print("interswap")
             continue
-        """
-        t = 0
-        for i in range (len(routes)):
-            d = sw.SWAP(routes[i],False,False,dm)
-            if con.ROUTE_COST(routes[i],dm)>con.ROUTE_COST(d,dm):
-                routes[i] = copy.deepcopy(d)
-                t = t+1
-                #print ("swap")
-                break
-        if t>0:            
-            continue
-        
-        t = 0
-        for i in range (len(routes)):
-            e = r.RELOCATE(routes[i],False,False,dm)
-            if con.ROUTE_COST(routes[i],dm)>con.ROUTE_COST(e,dm):
-                routes[i] = copy.deepcopy(e)
-                t = t+1
-                #print ("swap")
-                break
-        if t>0:            
-            continue
-        """
+
         improvement = False
         
         
